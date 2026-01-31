@@ -15,9 +15,11 @@ identical(data$X, as.integer(rownames(data)))
 
 data <- data[, -which(names(data) == "X")]
 
+View(data[, c("Species_fn", "Species")])
 summary(as.factor(data$Species))
 summary(as.factor(data$Species_fn))
 data <- data[, -which(names(data) == "Species_fn")]
+View(data[, c("Place", "Site")])
   
 data$V_blood_BDeq1
 sum(data$V_blood_BDeq1) == length(data$V_blood_BDeq1) 
